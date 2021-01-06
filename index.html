@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home - Programmer101N</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/styles.css" />
+	</head>
+	<body>
+		<div class="bubble-container">
+			<div class="img-container">
+				<img src="https://th.bing.com/th/id/Rcb3ea77bc303d8e379aca0c0916cafac?rik=Y6DYZIYKjjA3ag&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fa%2f9%2f2%2f29702.jpg&ehk=XzBkKN86zXbM%2fLyfdNITGljJEUEH%2blam0UL%2btdeZRA8%3d&risl=&pid=ImgRaw" alt="" />
+			</div>
+			<div class="bubble"></div>
+			<div class="bubble"></div>
+			<div class="bubble"></div>
+			<div class="bubble"></div>
+		</div>
+	</body>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/anime.min.js"></script>
+
+	<script>
+		setInterval(() => {
+			anime({
+				targets: ".bubble",
+				left: (p) => `${anime.random(0, 100)}%`,
+				top: ["120%", "-50%"],
+                duration: 5000,
+                delay: anime.stagger(500),
+				easing: "linear",
+			});
+		}, 7000);
+	</script>
+</html>
